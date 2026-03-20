@@ -1,0 +1,16 @@
+version : '1.0'
+
+services:
+  db:
+    image : mysql:latest
+    container_name : cmsMysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD : ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DB_NAME}
+      MYSQL_ROOT_USER: ${MYSQL_ROOT_USER}
+    volumes:
+      - ./mysqlData:/varlib/mysql/mysql-data
+    ports:
+      - 3306:3306
+
