@@ -1,7 +1,11 @@
-# Docker Compose Setup 
+## Docker Compose Setup
 
+To run the database locally using Docker, follow these steps:
 
-> After cloning the project in the .env create these varibles 
-MYSQL_PASSWORD
-MYSQL_DB_NAME
-MYSQL_ROOT_USER
+1. **Configure Environment Variables:**
+   Create a `.env` file in the root of your project and add the following database credentials:
+   ```env
+   MYSQL_ROOT_USER=your_root_user_here
+   MYSQL_PASSWORD=your_password_here
+   MYSQL_DB_NAME=your_db_name_here
+
